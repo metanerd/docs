@@ -1,10 +1,18 @@
-<header>
+<div class="notification-bar sticky-top">
+    <div class="notification-bar__content">
+        <a class="notification-bar__close" data-ol-has-click-handler="">
+            <span aria-hidden="true">×</span>
+        </a>
+        <div>We've updated this site to make content easier to find. Use the feedback option in the bottom right corner of any page to share your feedback with us.</div>
+    </div>
+</div>
+<header class="with-notification">
 	<div class="header__container">
 		<div class="search__icon">
 			<i class="fa fa-search"></i>
 		</div>
 		<a href="https://docs.mattermost.com/" class="header__logo">
-			<img width="176" src="https://about.mattermost.com/wp-content/uploads/2017/08/Mattermost-Logo-Blue.svg">
+			<img width="176" height="29" src="{{ pathto('_static/images/Mattermost-Logo-Blue.svg', 1) }}" alt="Mattermost">
 		</a>
 		<div class="links__icon">
 			<i class="fa fa-bars"></i>

@@ -1,7 +1,9 @@
+:orphan:
+
 .. _install-debian-server:
 
 Installing Debian Buster
-========================
+------------------------
 
 Install the 64-bit version of Debian on each machine that hosts one or more of the components.
 

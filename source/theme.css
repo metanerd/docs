@@ -1,3 +1,80 @@
+/* Pygment CSS transfer to reduce CSS assets */
+pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #eeffcc; }
+.highlight .c { color: #408090; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408090; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408090; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .cpf { color: #408090; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408090; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408090; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #333333 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #208050 } /* Literal.Number */
+.highlight .s { color: #4070a0 } /* Literal.String */
+.highlight .na { color: #4070a0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60add5 } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287e } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #bb60d5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #208050 } /* Literal.Number.Bin */
+.highlight .mf { color: #208050 } /* Literal.Number.Float */
+.highlight .mh { color: #208050 } /* Literal.Number.Hex */
+.highlight .mi { color: #208050 } /* Literal.Number.Integer */
+.highlight .mo { color: #208050 } /* Literal.Number.Oct */
+.highlight .sa { color: #4070a0 } /* Literal.String.Affix */
+.highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070a0 } /* Literal.String.Char */
+.highlight .dl { color: #4070a0 } /* Literal.String.Delimiter */
+.highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+.highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #c65d09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #06287e } /* Name.Function.Magic */
+.highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+.highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+.highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+.highlight .vm { color: #bb60d5 } /* Name.Variable.Magic */
+.highlight .il { color: #208050 } /* Literal.Number.Integer.Long */
+/* End Pygment */
+
 @media screen and (min-width: 1400px) {
 	.wy-nav-content {
 		height: auto;
@@ -10,38 +87,26 @@ html, body {
 	overflow: hidden;
 }
 
-footer {
-	padding-bottom: 30px;
+.pointer-events-none {
+	pointer-events: none;
 }
 
 /* Thermometer */
+:root {
+	--center-channel-text-64: rgba(61, 60, 64, 0.64);
+	--center-channel-text: rgba(61, 60, 64, 1);
+}
+
 .c-thermometer {
-	padding: 1rem 0;
+	padding: 2rem 0 0;
     display: block;
-    width: 20em;
+    width: 270px;
     text-align: center;
-    position: fixed;
-    z-index: 999;
-    right: 1rem;
-    bottom: 0;
+    position: absolute;
+    right: -2rem;
+    top: 0;
     border-radius: 20px;
-}
-.c-thermometer__trigger {
-	cursor: pointer;
-	filter: grayscale(100%);
-    font-size: 2rem;
-    text-align: right;
-    padding-right: 2rem;
-}
-.c-thermometer__trigger div {
-    display: inline-flex;
-    width: 3rem;
-    height: 3rem;
-    background: white;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50px;
-    box-shadow: 0 0 8px #00000024;
+	font-size: 14px;
 }
 .c-thermometer__trigger:hover {
 	filter: grayscale(0);
@@ -51,7 +116,8 @@ footer {
 }
 
 .c-thermometer .c-thermometer__paragraph {
-	margin-bottom: 0.8rem;
+	margin-bottom: 1rem;
+	color: var(--center-channel-text-64);
 }
 
 .c-thermometer__close {
@@ -72,33 +138,23 @@ footer {
 	color: #444;
 }
 
-.c-thermometer__popup {
-	display: none;
-	position: absolute;
-    bottom: 5rem;
-    right: 2rem;
-    min-width: 19rem;
-    height: auto;
-    background: #fff;
-    padding: 1rem;
-    box-shadow: 0 0 8px #00000024;
-    border-radius: 1rem;
-}
 .c-thermometer__emojis {
 	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	font-size: 1.6em;
 }
 .c-thermometer__emojis p {
 	margin: 0;
-	font-size: 0.5em;
+	font-size: inherit;
+	color: var(--center-channel-text-64);
+}
+.c-thermometer__emoji {
+	font-size: 28px;
 }
 .c-thermometer__emojis a {
 	z-index: 2;
 	position: relative;
-	opacity: .6;
 	color: inherit;
 	text-decoration: none;
 	transition: all 0.2s ease;
@@ -107,11 +163,217 @@ footer {
 	filter: grayscale(100%);
 	flex: 1;
 }
-.c-thermometer__emojis a:hover {
+.c-thermometer__emojis a:hover, .c-thermometer__emojis a.selected {
+	color: inherit;
 	filter: grayscale(0);
-	opacity: 1;
 }
 /* Thermometer ends */
+
+/* Thermometer Modal */
+
+.c-thermometer-modal__container {
+	display: none;
+	position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgb(0 0 0 / 50%);
+}
+
+.c-thermometer-modal__container > div {
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+	padding: 0 24px;
+}
+
+.c-thermometer-modal__content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px;
+    max-width: 368px;
+    width: 100%;
+}
+
+.c-thermometer-modal__content h3 {
+	color: var(--center-channel-text);
+	margin-bottom: 12px;
+}
+
+.c-thermometer-modal__textarea-footer {
+	display: flex;
+	justify-content: space-between;
+	font-size: 12px;
+	line-height: 24px;
+}
+
+.c-thermometer-modal__textarea__error {
+	color: #FD5960;
+	display: none;
+}
+
+.c-thermometer-modal__counter {
+	color: var(--center-channel-text-64);
+	text-align: right;
+}
+
+.c-thermometer-modal__content p {
+	font-size: 14px;
+	line-height: 17px;
+	margin-bottom: 1rem;
+	color: var(--center-channel-text-64);
+}
+
+.c-thermometer-modal__content textarea {
+	border-radius: 4px;
+	height: 142px;
+	padding: 14px;
+	font-size: 16px;
+	resize: none;
+	border: 1px solid rgba(61, 60, 64, 0.16);
+	box-shadow: none;
+}
+
+
+.c-thermometer-modal__content textarea:focus {
+	border-color:#166DE0;
+}
+
+.c-thermometer-modal__footer {
+	display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.c-thermometer-modal__footer .btn {
+	border-radius: 4px;
+	height: 40px;
+	padding: 0 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 600;
+	font-size: 14px;
+	border: none;
+}
+
+.c-thermometer-modal__footer .btn-primary {
+	background: #166DE0;
+}
+
+.c-thermometer-modal__footer .btn-primary:hover, .c-thermometer-modal__footer .btn-primary:focus, .c-thermometer-modal__footer .btn-primary:active {
+	background: rgb(19, 93, 190);
+}
+
+/* Thermometer Modal Ends */
+
+/* Thermometer Confirmation Popup */
+
+.c-thermometer-popup {
+	border-radius: 8px;
+	border: 1px solid rgba(61, 60, 64, 0.08);
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12);
+	padding: 16px 40px 24px;
+	display: none;
+	text-align: center;
+	max-width: 210px;
+	position: absolute;
+    right: 0;
+    top: -120px;
+    background: white;
+	z-index: 9;
+}
+
+.c-thermometer-popup h5 {
+	font-size: 14px;
+	margin: 8px 0;
+	color: var(--center-channel-text);
+}
+
+.c-thermometer-popup p {
+	font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+	margin: 0;
+}
+
+.c-thermometer-popup__close {
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	color: rgba(61, 60, 64, 0.72);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	right: 8px;
+    top: 8px;
+    font-size: 22px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+
+.c-thermometer-popup__close:hover {
+	color: var(--center-channel-text);
+}
+
+/* Thermometer Confirmation Popup Ends */
+
+footer {
+	position: relative;
+    border-top: 1px solid #dedede;
+    margin-top: 24px;
+	padding: 24px 0 40px;
+}
+
+.rst-footer-buttons {
+	padding-bottom: 16px;
+	width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+.rst-footer-buttons a:last-child {
+	margin-right: 16px;
+}
+
+footer hr {
+	display: none;
+}
+
+@media (max-width: 1024px) {
+	footer {
+		padding: 160px 0 20px;
+	}
+
+	.c-thermometer {
+		width: 100%;
+		left: 0;
+		display: flex;
+		justify-content: center;
+	}
+
+	.c-thermometer__trigger {
+		width: 270px;
+	}
+
+	.c-thermometer-popup {
+		max-width: 100%;
+		width: 100%;
+		top: 20px;
+	}
+}
+
 
 
 .features__table {
@@ -598,4 +860,77 @@ header .header__searchbar {
 	div.c-thermometer__trigger {
 		display: none;
 	}
+}
+
+/* Notification Banner */
+
+.notification-bar {
+	color: #0058cc;
+    text-align: center;
+    display: none;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    white-space: nowrap;
+    background-image: -webkit-gradient(linear,left top,right top,from(#f0f6ff),to(#d7e7ff));
+    background-image: linear-gradient(90deg,#f0f6ff 0,#d7e7ff 100%);
+    position: fixed;
+    z-index: 9999;
+}
+
+.notification-bar.flex {
+	display: flex;
+}
+
+.notification-bar.flex {
+	display: flex;
+}
+
+.notification-bar.closed {
+    display: none;
+}
+
+.notification-bar__content {
+    padding: 2rem 3.6rem;
+    font-size: 16px;
+    line-height: 1.4;
+    width: 100%;
+}
+
+.notification-bar__content > div {
+	overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.notification-bar a {
+    color: #0058cc;
+}
+
+.notification-bar__close {
+    font-size: 36px;
+    font-weight: 300;
+    position: absolute;
+    cursor: pointer;
+    right: 0px;
+    opacity: .3;
+    top: 0;
+    width: 64px;
+    line-height: 64px;
+}
+
+.notification-bar-hide:hover {
+    opacity: .5;
+}
+
+header.with-notification {
+	top: 64px;
+}
+
+.wy-grid-for-nav {
+	padding-top: 134px;
+}
+
+.wy-grid-for-nav.no-notification {
+	padding-top: 70px;
 }
